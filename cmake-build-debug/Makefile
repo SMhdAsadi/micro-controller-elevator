@@ -496,54 +496,6 @@ Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c.s
 .PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c.s
 
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd.obj: Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd.c.obj
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd.obj
-
-# target to build an object file
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd.c.obj
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd.c.obj
-
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd.i: Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd.c.i
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd.i
-
-# target to preprocess a source file
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd.c.i
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd.c.i
-
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd.s: Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd.c.s
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd.s
-
-# target to generate assembly for a file
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd.c.s
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd.c.s
-
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd_ex.obj: Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd_ex.c.obj
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd_ex.obj
-
-# target to build an object file
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd_ex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd_ex.c.obj
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd_ex.c.obj
-
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd_ex.i: Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd_ex.c.i
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd_ex.i
-
-# target to preprocess a source file
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd_ex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd_ex.c.i
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd_ex.c.i
-
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd_ex.s: Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd_ex.c.s
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd_ex.s
-
-# target to generate assembly for a file
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd_ex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd_ex.c.s
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd_ex.c.s
-
 Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.obj: Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.c.obj
 .PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.obj
 
@@ -640,54 +592,6 @@ Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.c.s
 .PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.c.s
 
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.obj: Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.c.obj
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.obj
-
-# target to build an object file
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.c.obj
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.c.obj
-
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.i: Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.c.i
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.i
-
-# target to preprocess a source file
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.c.i
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.c.i
-
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.s: Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.c.s
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.s
-
-# target to generate assembly for a file
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.c.s
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.c.s
-
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.obj: Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.c.obj
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.obj
-
-# target to build an object file
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.c.obj
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.c.obj
-
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.i: Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.c.i
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.i
-
-# target to preprocess a source file
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.c.i
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.c.i
-
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.s: Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.c.s
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.s
-
-# target to generate assembly for a file
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.c.s
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.c.s
-
 Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.obj: Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.c.obj
 .PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.obj
 
@@ -736,29 +640,53 @@ Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.c.s
 .PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.c.s
 
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.obj: Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.c.obj
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.obj
+Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.obj: Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c.obj
+.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.obj
 
 # target to build an object file
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.c.obj
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.c.obj
+Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c.obj
+.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c.obj
 
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.i: Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.c.i
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.i
+Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.i: Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c.i
+.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.i
 
 # target to preprocess a source file
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.c.i
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.c.i
+Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c.i
+.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c.i
 
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.s: Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.c.s
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.s
+Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.s: Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c.s
+.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.s
 
 # target to generate assembly for a file
-Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.c.s
-.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.c.s
+Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c.s
+.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c.s
+
+Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart_ex.obj: Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart_ex.c.obj
+.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart_ex.obj
+
+# target to build an object file
+Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart_ex.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart_ex.c.obj
+.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart_ex.c.obj
+
+Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart_ex.i: Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart_ex.c.i
+.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart_ex.i
+
+# target to preprocess a source file
+Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart_ex.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart_ex.c.i
+.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart_ex.c.i
+
+Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart_ex.s: Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart_ex.c.s
+.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart_ex.s
+
+# target to generate assembly for a file
+Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart_ex.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart_ex.c.s
+.PHONY : Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart_ex.c.s
 
 # Help Target
 help:
@@ -815,12 +743,6 @@ help:
 	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.obj
 	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.i
 	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.s
-	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd.obj
-	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd.i
-	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd.s
-	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd_ex.obj
-	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd_ex.i
-	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd_ex.s
 	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.obj
 	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.i
 	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.s
@@ -833,21 +755,18 @@ help:
 	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.obj
 	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.i
 	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.s
-	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.obj
-	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.i
-	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.s
-	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.obj
-	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.i
-	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.s
 	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.obj
 	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.i
 	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.s
 	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.obj
 	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.i
 	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.s
-	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.obj
-	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.i
-	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.s
+	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.obj
+	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.i
+	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.s
+	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart_ex.obj
+	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart_ex.i
+	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart_ex.s
 .PHONY : help
 
 

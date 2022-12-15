@@ -243,12 +243,6 @@
 		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_i2c_ex.h">
 			<Option target="micro-controller-elevator-mini-project.elf"/>
 		</Unit>
-		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_pcd.h">
-			<Option target="micro-controller-elevator-mini-project.elf"/>
-		</Unit>
-		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_pcd_ex.h">
-			<Option target="micro-controller-elevator-mini-project.elf"/>
-		</Unit>
 		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_pwr.h">
 			<Option target="micro-controller-elevator-mini-project.elf"/>
 		</Unit>
@@ -261,16 +255,16 @@
 		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc_ex.h">
 			<Option target="micro-controller-elevator-mini-project.elf"/>
 		</Unit>
-		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi.h">
-			<Option target="micro-controller-elevator-mini-project.elf"/>
-		</Unit>
-		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi_ex.h">
-			<Option target="micro-controller-elevator-mini-project.elf"/>
-		</Unit>
 		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_tim.h">
 			<Option target="micro-controller-elevator-mini-project.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_tim_ex.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart_ex.h">
 			<Option target="micro-controller-elevator-mini-project.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_bus.h">
@@ -288,9 +282,6 @@
 		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_gpio.h">
 			<Option target="micro-controller-elevator-mini-project.elf"/>
 		</Unit>
-		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_i2c.h">
-			<Option target="micro-controller-elevator-mini-project.elf"/>
-		</Unit>
 		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_pwr.h">
 			<Option target="micro-controller-elevator-mini-project.elf"/>
 		</Unit>
@@ -300,7 +291,10 @@
 		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_system.h">
 			<Option target="micro-controller-elevator-mini-project.elf"/>
 		</Unit>
-		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_usb.h">
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_tim.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_usart.h">
 			<Option target="micro-controller-elevator-mini-project.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_utils.h">
@@ -336,12 +330,6 @@
 		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c">
 			<Option target="micro-controller-elevator-mini-project.elf"/>
 		</Unit>
-		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd.c">
-			<Option target="micro-controller-elevator-mini-project.elf"/>
-		</Unit>
-		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd_ex.c">
-			<Option target="micro-controller-elevator-mini-project.elf"/>
-		</Unit>
 		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.c">
 			<Option target="micro-controller-elevator-mini-project.elf"/>
 		</Unit>
@@ -354,19 +342,16 @@
 		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.c">
 			<Option target="micro-controller-elevator-mini-project.elf"/>
 		</Unit>
-		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.c">
-			<Option target="micro-controller-elevator-mini-project.elf"/>
-		</Unit>
-		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.c">
-			<Option target="micro-controller-elevator-mini-project.elf"/>
-		</Unit>
 		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.c">
 			<Option target="micro-controller-elevator-mini-project.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.c">
 			<Option target="micro-controller-elevator-mini-project.elf"/>
 		</Unit>
-		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.c">
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_uart_ex.c">
 			<Option target="micro-controller-elevator-mini-project.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/STM32F303VCTX_FLASH.ld">
