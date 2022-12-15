@@ -1,0 +1,3 @@
+C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug/CMakeFiles/micro-controller-elevator-mini-project.elf.dir
+C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug/CMakeFiles/rebuild_cache.dir

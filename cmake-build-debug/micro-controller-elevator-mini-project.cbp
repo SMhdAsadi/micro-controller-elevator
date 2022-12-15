@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="micro-controller-elevator-mini-project"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JetBrains/CLion 2022.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/JetBrains/CLion 2022.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JetBrains/CLion 2022.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JetBrains/CLion 2022.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="micro-controller-elevator-mini-project.elf">
+				<Option output="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug/micro-controller-elevator-mini-project.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDEBUG"/>
+					<Add option="-DUSE_HAL_DRIVER"/>
+					<Add option="-DSTM32F303xC"/>
+					<Add directory="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc"/>
+					<Add directory="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc"/>
+					<Add directory="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Device/ST/STM32F3xx/Include"/>
+					<Add directory="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Include"/>
+					<Add directory="c:\program files (x86)\arm gnu toolchain arm-none-eabi\12.2 mpacbti-bet1\bin\../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/include/c++/12.2.0"/>
+					<Add directory="c:\program files (x86)\arm gnu toolchain arm-none-eabi\12.2 mpacbti-bet1\bin\../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/include/c++/12.2.0/arm-none-eabi"/>
+					<Add directory="c:\program files (x86)\arm gnu toolchain arm-none-eabi\12.2 mpacbti-bet1\bin\../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/include/c++/12.2.0/backward"/>
+					<Add directory="c:\program files (x86)\arm gnu toolchain arm-none-eabi\12.2 mpacbti-bet1\bin\../lib/gcc/arm-none-eabi/12.2.0/include"/>
+					<Add directory="c:\program files (x86)\arm gnu toolchain arm-none-eabi\12.2 mpacbti-bet1\bin\../lib/gcc/arm-none-eabi/12.2.0/include-fixed"/>
+					<Add directory="c:\program files (x86)\arm gnu toolchain arm-none-eabi\12.2 mpacbti-bet1\bin\../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JetBrains/CLion 2022.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug/Makefile&quot;  VERBOSE=1 micro-controller-elevator-mini-project.elf"/>
+					<CompileFile command="C:/PROGRA~1/JetBrains/CLion 2022.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JetBrains/CLion 2022.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JetBrains/CLion 2022.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="micro-controller-elevator-mini-project.elf/fast">
+				<Option output="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug/micro-controller-elevator-mini-project.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDEBUG"/>
+					<Add option="-DUSE_HAL_DRIVER"/>
+					<Add option="-DSTM32F303xC"/>
+					<Add directory="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc"/>
+					<Add directory="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc"/>
+					<Add directory="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Device/ST/STM32F3xx/Include"/>
+					<Add directory="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Include"/>
+					<Add directory="c:\program files (x86)\arm gnu toolchain arm-none-eabi\12.2 mpacbti-bet1\bin\../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/include/c++/12.2.0"/>
+					<Add directory="c:\program files (x86)\arm gnu toolchain arm-none-eabi\12.2 mpacbti-bet1\bin\../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/include/c++/12.2.0/arm-none-eabi"/>
+					<Add directory="c:\program files (x86)\arm gnu toolchain arm-none-eabi\12.2 mpacbti-bet1\bin\../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/include/c++/12.2.0/backward"/>
+					<Add directory="c:\program files (x86)\arm gnu toolchain arm-none-eabi\12.2 mpacbti-bet1\bin\../lib/gcc/arm-none-eabi/12.2.0/include"/>
+					<Add directory="c:\program files (x86)\arm gnu toolchain arm-none-eabi\12.2 mpacbti-bet1\bin\../lib/gcc/arm-none-eabi/12.2.0/include-fixed"/>
+					<Add directory="c:\program files (x86)\arm gnu toolchain arm-none-eabi\12.2 mpacbti-bet1\bin\../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JetBrains/CLion 2022.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug/Makefile&quot;  VERBOSE=1 micro-controller-elevator-mini-project.elf/fast"/>
+					<CompileFile command="C:/PROGRA~1/JetBrains/CLion 2022.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JetBrains/CLion 2022.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JetBrains/CLion 2022.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JetBrains/CLion 2022.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/JetBrains/CLion 2022.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JetBrains/CLion 2022.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JetBrains/CLion 2022.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JetBrains/CLion 2022.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/JetBrains/CLion 2022.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JetBrains/CLion 2022.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JetBrains/CLion 2022.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc/main.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc/stm32f3xx_hal_conf.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc/stm32f3xx_it.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Src/main.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Src/stm32f3xx_hal_msp.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Src/stm32f3xx_it.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Src/syscalls.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Src/sysmem.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Src/system_stm32f3xx.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Startup/startup_stm32f303vctx.s">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303xc.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Device/ST/STM32F3xx/Include/system_stm32f3xx.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Device/ST/STM32F3xx/License.md">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Include/cmsis_armcc.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Include/cmsis_armclang.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Include/cmsis_compiler.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Include/cmsis_gcc.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Include/cmsis_iccarm.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Include/cmsis_version.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Include/core_armv8mbl.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Include/core_armv8mml.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Include/core_cm0.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Include/core_cm0plus.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Include/core_cm1.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Include/core_cm23.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Include/core_cm3.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Include/core_cm33.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Include/core_cm4.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Include/core_cm7.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Include/core_sc000.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Include/core_sc300.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Include/mpu_armv7.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Include/mpu_armv8.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Include/tz_context.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/LICENSE.txt">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_cortex.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_dma.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_dma_ex.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_exti.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_flash.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_flash_ex.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_gpio.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_gpio_ex.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_i2c.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_i2c_ex.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_pcd.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_pcd_ex.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_pwr.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_pwr_ex.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc_ex.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi_ex.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_tim.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_tim_ex.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_bus.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_cortex.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_dma.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_exti.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_gpio.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_i2c.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_pwr.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_rcc.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_system.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_usb.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_utils.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/License.md">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_cortex.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_dma.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_exti.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_flash_ex.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_i2c_ex.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pcd_ex.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_pwr_ex.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc_ex.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_spi_ex.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_tim_ex.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_usb.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/STM32F303VCTX_FLASH.ld">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
