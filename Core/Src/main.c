@@ -47,6 +47,8 @@ UART_HandleTypeDef huart2;
 const int up_push_button_pin = GPIO_PIN_5;
 const int down_push_button_pin = GPIO_PIN_6;
 const int submit_push_button_pin = GPIO_PIN_7;
+unsigned long last_debounce_time = 0;
+unsigned long current_time = 0;
 
 extern int user_input;
 extern int max_floor;
@@ -65,6 +67,10 @@ static void MX_USART2_UART_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
+  current_time = HAL_GetTick();
+  if (current_time - last_debounce_time < 200) return;
+  last_debounce_time = current_time;
+
   switch(GPIO_Pin) {
     case up_push_button_pin:
       if(user_input < max_floor) user_input++;
