@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Core/Src/logger.c.obj"
+  "CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Core/Src/logger.c.obj.d"
   "CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Core/Src/main.c.obj"
   "CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Core/Src/main.c.obj.d"
   "CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Core/Src/stm32f3xx_hal_msp.c.obj"
@@ -11,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Core/Src/sysmem.c.obj.d"
   "CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Core/Src/system_stm32f3xx.c.obj"
   "CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Core/Src/system_stm32f3xx.c.obj.d"
+  "CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Core/Src/utility.c.obj"
+  "CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Core/Src/utility.c.obj.d"
   "CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Core/Startup/startup_stm32f303vctx.s.obj"
   "CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.c.obj"
   "CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.c.obj.d"

@@ -24,17 +24,11 @@
 /* USER CODE BEGIN Includes */
 #include <string.h>
 #include <stdio.h>
+#include "types.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN TD */
-
-// ELEVATOR_STATE.MOVING => there are some selected floors available in queue and elevator is moving between them.
-// ELEVATOR_STATE.IDLE => queue is empty.
-// CONFIG => admin mode; changing elevator config params
-typedef enum {MOVING, IDLE, CONFIG} ELEVATOR_STATE;
-typedef enum {LOW, HIGH} ALARM_STATE;
-
 /* USER CODE END TD */
 
 /* Private define ------------------------------------------------------------*/
@@ -49,17 +43,23 @@ typedef enum {LOW, HIGH} ALARM_STATE;
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-ELEVATOR_STATE elevator_state = IDLE;
-ALARM_STATE alarm_state = LOW;
+ElevatorState elevator_state = IDLE;
+AlarmState alarm_state = LOW;
 
 int seven_segment_digit_controller = 0;
+
 int current_floor = 0;
 int max_floor = 9;
 int moving_delay = 500;
+
+Queue floor_queue = {.values = {0}, .length = 0,};
+
 int user_input = 0;
-int alarm_enabled = 0;
+
 int alarm_led_enabled = 1;
+int alarm_enabled = 0;
 char *admin_password = "pass";
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -132,7 +132,7 @@ void test(int floors[]) {}
 /* External variables --------------------------------------------------------*/
 extern TIM_HandleTypeDef htim2;
 extern TIM_HandleTypeDef htim3;
-extern UART_HandleTypeDef huart2;
+extern UART_HandleTypeDef huart1;
 /* USER CODE BEGIN EV */
 
 /* USER CODE END EV */
@@ -329,17 +329,17 @@ void TIM3_IRQHandler(void)
 }
 
 /**
-  * @brief This function handles USART2 global interrupt / USART2 wake-up interrupt through EXTI line 26.
+  * @brief This function handles USART1 global interrupt / USART1 wake-up interrupt through EXTI line 25.
   */
-void USART2_IRQHandler(void)
+void USART1_IRQHandler(void)
 {
-  /* USER CODE BEGIN USART2_IRQn 0 */
+  /* USER CODE BEGIN USART1_IRQn 0 */
 
-  /* USER CODE END USART2_IRQn 0 */
-  HAL_UART_IRQHandler(&huart2);
-  /* USER CODE BEGIN USART2_IRQn 1 */
+  /* USER CODE END USART1_IRQn 0 */
+  HAL_UART_IRQHandler(&huart1);
+  /* USER CODE BEGIN USART1_IRQn 1 */
 
-  /* USER CODE END USART2_IRQn 1 */
+  /* USER CODE END USART1_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */

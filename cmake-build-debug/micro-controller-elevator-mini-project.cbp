@@ -96,6 +96,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc/logger.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
 		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc/main.h">
 			<Option target="micro-controller-elevator-mini-project.elf"/>
 		</Unit>
@@ -103,6 +106,15 @@
 			<Option target="micro-controller-elevator-mini-project.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc/stm32f3xx_it.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc/types.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc/utility.h">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Src/logger.c">
 			<Option target="micro-controller-elevator-mini-project.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Src/main.c">
@@ -121,6 +133,9 @@
 			<Option target="micro-controller-elevator-mini-project.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Src/system_stm32f3xx.c">
+			<Option target="micro-controller-elevator-mini-project.elf"/>
+		</Unit>
+		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Src/utility.c">
 			<Option target="micro-controller-elevator-mini-project.elf"/>
 		</Unit>
 		<Unit filename="C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Startup/startup_stm32f303vctx.s">

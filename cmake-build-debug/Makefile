@@ -128,6 +128,30 @@ micro-controller-elevator-mini-project.elf/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/build
 .PHONY : micro-controller-elevator-mini-project.elf/fast
 
+Core/Src/logger.obj: Core/Src/logger.c.obj
+.PHONY : Core/Src/logger.obj
+
+# target to build an object file
+Core/Src/logger.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Core/Src/logger.c.obj
+.PHONY : Core/Src/logger.c.obj
+
+Core/Src/logger.i: Core/Src/logger.c.i
+.PHONY : Core/Src/logger.i
+
+# target to preprocess a source file
+Core/Src/logger.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Core/Src/logger.c.i
+.PHONY : Core/Src/logger.c.i
+
+Core/Src/logger.s: Core/Src/logger.c.s
+.PHONY : Core/Src/logger.s
+
+# target to generate assembly for a file
+Core/Src/logger.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Core/Src/logger.c.s
+.PHONY : Core/Src/logger.c.s
+
 Core/Src/main.obj: Core/Src/main.c.obj
 .PHONY : Core/Src/main.obj
 
@@ -271,6 +295,30 @@ Core/Src/system_stm32f3xx.s: Core/Src/system_stm32f3xx.c.s
 Core/Src/system_stm32f3xx.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Core/Src/system_stm32f3xx.c.s
 .PHONY : Core/Src/system_stm32f3xx.c.s
+
+Core/Src/utility.obj: Core/Src/utility.c.obj
+.PHONY : Core/Src/utility.obj
+
+# target to build an object file
+Core/Src/utility.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Core/Src/utility.c.obj
+.PHONY : Core/Src/utility.c.obj
+
+Core/Src/utility.i: Core/Src/utility.c.i
+.PHONY : Core/Src/utility.i
+
+# target to preprocess a source file
+Core/Src/utility.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Core/Src/utility.c.i
+.PHONY : Core/Src/utility.c.i
+
+Core/Src/utility.s: Core/Src/utility.c.s
+.PHONY : Core/Src/utility.s
+
+# target to generate assembly for a file
+Core/Src/utility.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\micro-controller-elevator-mini-project.elf.dir\build.make CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Core/Src/utility.c.s
+.PHONY : Core/Src/utility.c.s
 
 Core/Startup/startup_stm32f303vctx.obj: Core/Startup/startup_stm32f303vctx.s.obj
 .PHONY : Core/Startup/startup_stm32f303vctx.obj
@@ -697,6 +745,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... micro-controller-elevator-mini-project.elf
+	@echo ... Core/Src/logger.obj
+	@echo ... Core/Src/logger.i
+	@echo ... Core/Src/logger.s
 	@echo ... Core/Src/main.obj
 	@echo ... Core/Src/main.i
 	@echo ... Core/Src/main.s
@@ -715,6 +766,9 @@ help:
 	@echo ... Core/Src/system_stm32f3xx.obj
 	@echo ... Core/Src/system_stm32f3xx.i
 	@echo ... Core/Src/system_stm32f3xx.s
+	@echo ... Core/Src/utility.obj
+	@echo ... Core/Src/utility.i
+	@echo ... Core/Src/utility.s
 	@echo ... Core/Startup/startup_stm32f303vctx.obj
 	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.obj
 	@echo ... Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal.i
