@@ -24,7 +24,9 @@
 /* USER CODE BEGIN Includes */
 #include <string.h>
 #include <stdio.h>
+#include <stdbool.h>
 #include "types.h"
+#include "utility.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -43,10 +45,10 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-ElevatorState elevator_state = IDLE;
 AlarmState alarm_state = LOW;
 
 int seven_segment_digit_controller = 0;
+int timer_counter = 0;
 
 int current_floor = 0;
 int max_floor = 9;
@@ -56,8 +58,10 @@ Queue floor_queue = {.values = {0}, .length = 0,};
 
 int user_input = 0;
 
-int alarm_led_enabled = 1;
-int alarm_enabled = 0;
+bool alarm_led_enabled = true;
+bool alarm_enabled = false;
+bool isAdminMode = false;
+bool is_idle = true;
 char *admin_password = "pass";
 
 /* USER CODE END PV */
@@ -324,7 +328,33 @@ void TIM3_IRQHandler(void)
   /* USER CODE END TIM3_IRQn 0 */
   HAL_TIM_IRQHandler(&htim3);
   /* USER CODE BEGIN TIM3_IRQn 1 */
+  if (isAdminMode || is_idle) return;
 
+  timer_counter++;
+
+  if (timer_counter % 5 == 0) {
+//    buzzer_kon();
+  }
+  if (timer_counter % (moving_delay / 50) == 0) {
+    int target_floor = peek_from_floor_queue();
+    if (current_floor < target_floor) {
+      current_floor++;
+      if (current_floor == target_floor) {
+        dequeue_from_floor_queue();
+        if (floor_queue.length == 0) {
+          is_idle = true;
+        }
+      }
+    } else if (current_floor > target_floor) {
+      current_floor--;
+      if (current_floor == target_floor) {
+        dequeue_from_floor_queue();
+        if (floor_queue.length == 0) {
+          is_idle = true;
+        }
+      }
+    }
+  }
   /* USER CODE END TIM3_IRQn 1 */
 }
 

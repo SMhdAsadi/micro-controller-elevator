@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include <string.h>
 #include <malloc.h>
+#include <stdbool.h>
 #include "main.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -56,8 +57,10 @@ unsigned long last_debounce_time = 0;
 unsigned long current_time = 0;
 
 extern int user_input;
+extern int current_floor;
 extern int max_floor;
 extern Queue floor_queue;
+extern int is_idle;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -73,12 +76,16 @@ static void MX_USART1_UART_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 void printUART(char *string) {
-  HAL_UART_Transmit(&huart1, (uint8_t *)string, strlen(string), 500);
+  HAL_UART_Transmit(&huart1, (uint8_t *)string, strlen(string), 1000);
 }
 
 void onSubmitPress() {
-  static int status;
-  status = add_to_floor_queue(user_input);
+  if (current_floor == user_input) {
+    printUART("[Submit]: Elevator is already in your floor\n\n\0");
+    return;
+  }
+  int status = add_to_floor_queue(user_input);
+  is_idle = false;
   char *message = log_submit_status(status);
   printUART(message);
   free(message);

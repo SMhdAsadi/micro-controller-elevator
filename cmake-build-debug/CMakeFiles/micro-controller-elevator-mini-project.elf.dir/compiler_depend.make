@@ -48,6 +48,7 @@ CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Core/Src/main.c.obj: C
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/sys/string.h \
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/malloc.h \
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/machine/malloc.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/lib/gcc/arm-none-eabi/12.2.0/include/stdbool.h \
   C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc/main.h \
   C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h \
   C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc/stm32f3xx_hal_conf.h \
@@ -187,6 +188,9 @@ CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Core/Src/stm32f3xx_it.
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/stdio.h \
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/lib/gcc/arm-none-eabi/12.2.0/include/stdarg.h \
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/sys/stdio.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/lib/gcc/arm-none-eabi/12.2.0/include/stdbool.h \
+  C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc/types.h \
+  C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc/utility.h \
   C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc/types.h
 
 CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Core/Src/syscalls.c.obj: C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Src/syscalls.c \
@@ -1058,9 +1062,9 @@ C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/a
 
 C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/malloc.h:
 
-C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Src/stm32f3xx_it.c:
-
 C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc/types.h:
+
+C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/lib/gcc/arm-none-eabi/12.2.0/include/stdbool.h:
 
 C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc/stm32f3xx_hal_conf.h:
 
@@ -1117,6 +1121,8 @@ C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc/utility.h
 C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc/logger.h:
 
 C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Src/stm32f3xx_hal_msp.c:
+
+C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Src/stm32f3xx_it.c:
 
 C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc/stm32f3xx_it.h:
 
@@ -1175,8 +1181,6 @@ C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Src/sysmem.c:
 C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Src/system_stm32f3xx.c:
 
 C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Src/utility.c:
-
-C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/lib/gcc/arm-none-eabi/12.2.0/include/stdbool.h:
 
 C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_gpio.c:
 

@@ -4,7 +4,7 @@
 extern Queue floor_queue;
 extern int max_floor;
 
-int enqueue(int number) {
+int enqueue_to_floor_queue(int number) {
   if (floor_queue.length >= 10 || floor_queue.length < 0) return -1;
 
   floor_queue.values[floor_queue.length] = number;
@@ -12,7 +12,7 @@ int enqueue(int number) {
   return 0;
 }
 
-int dequeue() {
+int dequeue_from_floor_queue() {
   if (floor_queue.length <= 0) return -1;
 
   int output = floor_queue.values[0];
@@ -25,7 +25,13 @@ int dequeue() {
   return output;
 }
 
-bool queue_includes(int number) {
+int peek_from_floor_queue() {
+  if (floor_queue.length <= 0) return -1;
+
+  return floor_queue.values[0];
+}
+
+bool floor_queue_includes(int number) {
   for (int i = 0; i < floor_queue.length; i++) {
     if (floor_queue.values[i] == number) {
       return true;
@@ -35,10 +41,10 @@ bool queue_includes(int number) {
 }
 
 int add_to_floor_queue(int floor) {
-  if (floor_queue.length >= max_floor) return -1; // queue is full
+  if (floor_queue_includes(floor)) return -3; // no need to add
+  if (floor_queue.length > max_floor) return -1; // queue is full
   if (floor > max_floor || floor < 0) return -2; // floor is wrong
-  if (queue_includes(floor)) return -3; // no need to add
 
-  enqueue(floor);
+  enqueue_to_floor_queue(floor);
   return 0;
 }
