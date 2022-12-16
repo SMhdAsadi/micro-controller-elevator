@@ -22,10 +22,18 @@
 #include "stm32f3xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <string.h>
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN TD */
+
+// ELEVATOR_STATE.MOVING => there are some selected floors available in queue and elevator is moving between them.
+// ELEVATOR_STATE.IDLE => queue is empty.
+// CONFIG => admin mode; changing elevator config params
+typedef enum {MOVING, IDLE, CONFIG} ELEVATOR_STATE;
+typedef enum {LOW, HIGH} ALARM_STATE;
 
 /* USER CODE END TD */
 
@@ -41,17 +49,84 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
+ELEVATOR_STATE elevator_state = IDLE;
+ALARM_STATE alarm_state = LOW;
 
+int seven_segment_digit_controller = 0;
+int current_floor = 0;
+int max_floor = 9;
+int moving_delay = 500;
+int user_input = 0;
+int alarm_enabled = 0;
+int alarm_led_enabled = 1;
+char *admin_password = "pass";
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN PFP */
-
+void login(char* password);
+void set_max_floor(int n);
+void set_floor(int n);
+void set_wait(int ms);
+void toggle_led(char* value);
+void test(int floors[]);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void numberToBcd(int i) {
+  int x1 = i&1;
+  int x2 = i&2;
+  int x3 = i&4;
+  int x4 = i&8;
+  if(x1 > 0) x1 = 1;
+  if(x2 > 0) x2 = 1;
+  if(x3 > 0) x3 = 1;
+  if(x4 > 0) x4 = 1;
+  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_3, x1);
+  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_4, x2);
+  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_5, x3);
+  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_6, x4);
+}
 
+void parse_command(char* command) {
+  if(strstr(command, "ADMIN#")) {
+    char *password = NULL;
+    sprintf(command, "ADMIN#%s", password);
+    login(password);
+  } else if(strstr(command, "SET MAX LEVEL")) {
+    int n = 0;
+    sprintf(command, "SET MAX LEVEL %d", n);
+    set_max_floor(n);
+  } else if(strstr(command, "SET LEVEL")) {
+    int n = 0;
+    sprintf(command, "SET LEVEL %d", n);
+    set_floor(n);
+  } else if(strstr(command, "SET WAIT")) {
+    int ms = 0;
+    sprintf(command, "SET WAIT %d", ms);
+    set_wait(ms);
+  } else if(strstr(command, "SET LED")) {
+    char *value = NULL;
+    sprintf(command, "SET LED %s", value);
+    toggle_led(value);
+  } else if(strstr(command, "TEST#")) {
+    char *str_value = NULL;
+    sprintf(command, "TEST#%s", str_value);
+    unsigned int size = strlen(str_value);
+    int values[size];
+    for(int i = 0; i < size; i++)
+      values[i] = str_value[i] - 48;
+    test(values);
+  }
+}
+void login(char* password) {}
+void set_max_floor(int n) {}
+void set_floor(int n) {}
+void set_wait(int ms) {}
+/* value: ON | OFF */
+void toggle_led(char* value) {}
+void test(int floors[]) {}
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
@@ -201,6 +276,22 @@ void SysTick_Handler(void)
 /******************************************************************************/
 
 /**
+  * @brief This function handles EXTI line[9:5] interrupts.
+  */
+void EXTI9_5_IRQHandler(void)
+{
+  /* USER CODE BEGIN EXTI9_5_IRQn 0 */
+
+  /* USER CODE END EXTI9_5_IRQn 0 */
+  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_5);
+  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_6);
+  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_7);
+  /* USER CODE BEGIN EXTI9_5_IRQn 1 */
+
+  /* USER CODE END EXTI9_5_IRQn 1 */
+}
+
+/**
   * @brief This function handles TIM2 global interrupt.
   */
 void TIM2_IRQHandler(void)
@@ -210,7 +301,16 @@ void TIM2_IRQHandler(void)
   /* USER CODE END TIM2_IRQn 0 */
   HAL_TIM_IRQHandler(&htim2);
   /* USER CODE BEGIN TIM2_IRQn 1 */
-
+  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_1 | GPIO_PIN_2, 0);
+  if (seven_segment_digit_controller == 0) {
+    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_1, 1);
+    numberToBcd(user_input);
+    seven_segment_digit_controller = 1;
+  } else {
+    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_2, 1);
+    numberToBcd(current_floor);
+    seven_segment_digit_controller = 0;
+  }
   /* USER CODE END TIM2_IRQn 1 */
 }
 

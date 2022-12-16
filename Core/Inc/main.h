@@ -63,8 +63,6 @@ void Error_Handler(void);
 #define CS_I2C_SPI_GPIO_Port GPIOE
 #define MEMS_INT3_Pin GPIO_PIN_4
 #define MEMS_INT3_GPIO_Port GPIOE
-#define MEMS_INT4_Pin GPIO_PIN_5
-#define MEMS_INT4_GPIO_Port GPIOE
 #define OSC32_IN_Pin GPIO_PIN_14
 #define OSC32_IN_GPIO_Port GPIOC
 #define OSC32_OUT_Pin GPIO_PIN_15
