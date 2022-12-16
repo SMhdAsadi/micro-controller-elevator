@@ -17,13 +17,13 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
-#include <string.h>
-#include <malloc.h>
-#include <stdbool.h>
 #include "main.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <stdbool.h>
+#include <malloc.h>
+#include <string.h>
 #include "types.h"
 #include "utility.h"
 #include "logger.h"
@@ -55,6 +55,10 @@ const int down_push_button_pin = GPIO_PIN_6;
 const int submit_push_button_pin = GPIO_PIN_7;
 unsigned long last_debounce_time = 0;
 unsigned long current_time = 0;
+
+char command[50] = {0};
+int command_index = 0;
+uint8_t command_letter[1] = {0};
 
 extern int user_input;
 extern int current_floor;
@@ -110,6 +114,17 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
       break;
   }
 }
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
+  if (command_letter[0] != '\n') {
+    command[command_index++] = command_letter[0];
+  } else {
+    command[command_index] = '\0';
+    command_index = 0;
+    HAL_UART_Transmit(&huart1, command, strlen(command), 100);
+  }
+  HAL_UART_Receive_IT(&huart1, command_letter, 1);
+}
 /* USER CODE END 0 */
 
 /**
@@ -146,6 +161,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT(&htim2);
   HAL_TIM_Base_Start_IT(&htim3);
+  HAL_UART_Receive_IT(&huart1, command_letter , 1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -403,7 +419,7 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
-  HAL_NVIC_SetPriority(EXTI9_5_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(EXTI9_5_IRQn, 1, 0);
   HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
 
 }
