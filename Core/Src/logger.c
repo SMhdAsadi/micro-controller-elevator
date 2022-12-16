@@ -1,10 +1,17 @@
 #include <string.h>
 #include <stdio.h>
 #include <malloc.h>
+#include <stdbool.h>
 #include "types.h"
+#include "stm32f3xx.h"
 
 extern Queue floor_queue;
 extern int user_input;
+extern UART_HandleTypeDef huart1;
+
+void printUART(char *string) {
+  HAL_UART_Transmit(&huart1, (uint8_t *)string, strlen(string), 1000);
+}
 
 char *get_floor_queue() {
   char digit[3];
@@ -19,9 +26,9 @@ char *get_floor_queue() {
   return string;
 }
 
-char *log_submit_status(int status) {
+char *log_submit(int status) {
   char *queue;
-  char *message = (char *) malloc(100 * sizeof (char));
+  char message[100] = {0};
 
   switch (status) {
     case 0:
@@ -57,5 +64,13 @@ char *log_submit_status(int status) {
       break;
   }
 
-  return message;
+  printUART(message);
+}
+
+void log_for_login(bool was_successful) {
+  if (was_successful) {
+    printUART("[LOGIN]: Logged in!\n\n");
+  } else {
+    printUART("[LOGIN]: Unable to login. Wrong password\n\n");
+  }
 }

@@ -60,7 +60,7 @@ int user_input = 0;
 
 bool alarm_led_enabled = true;
 bool alarm_enabled = false;
-bool isAdminMode = false;
+bool is_admin_mode = false;
 bool is_idle = true;
 char *admin_password = "pass";
 
@@ -68,12 +68,6 @@ char *admin_password = "pass";
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN PFP */
-void login(char* password);
-void set_max_floor(int n);
-void set_floor(int n);
-void set_wait(int ms);
-void toggle_led(char* value);
-void test(int floors[]);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -92,45 +86,6 @@ void numberToBcd(int i) {
   HAL_GPIO_WritePin(GPIOD, GPIO_PIN_5, x3);
   HAL_GPIO_WritePin(GPIOD, GPIO_PIN_6, x4);
 }
-
-void parse_command(char* command) {
-  if(strstr(command, "ADMIN#")) {
-    char *password = NULL;
-    sprintf(command, "ADMIN#%s", password);
-    login(password);
-  } else if(strstr(command, "SET MAX LEVEL")) {
-    int n = 0;
-    sprintf(command, "SET MAX LEVEL %d", n);
-    set_max_floor(n);
-  } else if(strstr(command, "SET LEVEL")) {
-    int n = 0;
-    sprintf(command, "SET LEVEL %d", n);
-    set_floor(n);
-  } else if(strstr(command, "SET WAIT")) {
-    int ms = 0;
-    sprintf(command, "SET WAIT %d", ms);
-    set_wait(ms);
-  } else if(strstr(command, "SET LED")) {
-    char *value = NULL;
-    sprintf(command, "SET LED %s", value);
-    toggle_led(value);
-  } else if(strstr(command, "TEST#")) {
-    char *str_value = NULL;
-    sprintf(command, "TEST#%s", str_value);
-    unsigned int size = strlen(str_value);
-    int values[size];
-    for(int i = 0; i < size; i++)
-      values[i] = str_value[i] - 48;
-    test(values);
-  }
-}
-void login(char* password) {}
-void set_max_floor(int n) {}
-void set_floor(int n) {}
-void set_wait(int ms) {}
-/* value: ON | OFF */
-void toggle_led(char* value) {}
-void test(int floors[]) {}
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
@@ -328,7 +283,7 @@ void TIM3_IRQHandler(void)
   /* USER CODE END TIM3_IRQn 0 */
   HAL_TIM_IRQHandler(&htim3);
   /* USER CODE BEGIN TIM3_IRQn 1 */
-  if (isAdminMode || is_idle) return;
+  if (is_admin_mode || is_idle) return;
 
   timer_counter++;
 

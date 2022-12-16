@@ -22,8 +22,6 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdbool.h>
-#include <malloc.h>
-#include <string.h>
 #include "types.h"
 #include "utility.h"
 #include "logger.h"
@@ -79,10 +77,6 @@ static void MX_USART1_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void printUART(char *string) {
-  HAL_UART_Transmit(&huart1, (uint8_t *)string, strlen(string), 1000);
-}
-
 void onSubmitPress() {
   if (current_floor == user_input) {
     printUART("[Submit]: Elevator is already in your floor\n\n\0");
@@ -90,9 +84,7 @@ void onSubmitPress() {
   }
   int status = add_to_floor_queue(user_input);
   is_idle = false;
-  char *message = log_submit_status(status);
-  printUART(message);
-  free(message);
+  log_submit(status);
 }
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
@@ -121,7 +113,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
   } else {
     command[command_index] = '\0';
     command_index = 0;
-    HAL_UART_Transmit(&huart1, command, strlen(command), 100);
+    parse_command(command);
   }
   HAL_UART_Receive_IT(&huart1, command_letter, 1);
 }
