@@ -21,6 +21,6 @@ typedef enum submit_status {
 } SubmitStatus;
 
 typedef enum login_status {LOGIN_CORRECT_PASSWORD, LOGIN_WRONG_PASSWORD, LOGIN_QUEUE_NOT_EMPTY} LoginStatus;
-
 typedef enum set_max_level_status {MAX_LEVEL_SUCCESS, MAX_LEVEL_NOT_ADMIN_MODE, MAX_LEVEL_WRONG_INPUT} MaxLevelStatus;
+typedef enum set_level_status {LEVEL_SUCCESS, LEVEL_NOT_ADMIN_MODE, LEVEL_WRONG_INPUT, LEVEL_OUT_OF_RANGE} LevelStatus;
 #endif //MICRO_CONTROLLER_ELEVATOR_MINI_PROJECT_TYPES_H

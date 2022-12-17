@@ -23,8 +23,6 @@ CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Core/Src/logger.c.obj:
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/stdio.h \
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/lib/gcc/arm-none-eabi/12.2.0/include/stdarg.h \
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/sys/stdio.h \
-  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/malloc.h \
-  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/machine/malloc.h \
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/stdlib.h \
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/machine/stdlib.h \
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/alloca.h \
@@ -1071,8 +1069,6 @@ C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/a
 
 C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303xc.h:
 
-C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/machine/malloc.h:
-
 C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/machine/_default_types.h:
 
 C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/sys/lock.h:
@@ -1103,11 +1099,9 @@ C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/l
 
 C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/sys/stdio.h:
 
-C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/malloc.h:
+C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/stdlib.h:
 
 C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc/utility.h:
-
-C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/stdlib.h:
 
 C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/sys/signal.h:
 

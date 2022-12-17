@@ -1,6 +1,5 @@
 #include <string.h>
 #include <stdio.h>
-#include <malloc.h>
 #include <stdlib.h>
 #include "types.h"
 #include "stm32f3xx.h"
@@ -9,6 +8,7 @@ extern Queue floor_queue;
 extern int user_input;
 extern UART_HandleTypeDef huart1;
 extern int max_floor;
+extern int current_floor;
 
 void printUART(char *string) {
   HAL_UART_Transmit(&huart1, (uint8_t *)string, strlen(string), 1000);
@@ -96,7 +96,28 @@ void log_for_max_level(MaxLevelStatus maxLevelStatus) {
       printUART("[SET_MAX_LEVEL]: Oh you need to be in admin mode!\n\n");
       break;
     case MAX_LEVEL_WRONG_INPUT:
-      printUART(("[SET_MAX_LEVEL]: Please enter command in this format: SET ADMIN MODE [0-9]\n\n"));
+      printUART(("[SET_MAX_LEVEL]: Please enter command in this format: SET MAX LEVEL [0-9]\n\n"));
+      break;
+  }
+}
+
+void log_for_level(LevelStatus levelStatus) {
+  char message[90];
+  switch (levelStatus) {
+    case LEVEL_SUCCESS:
+      sprintf(message, "[SET_LEVEL]: successfully set level to be %d\n\n", current_floor);
+      printUART(message);
+      break;
+    case LEVEL_NOT_ADMIN_MODE:
+      printUART("[SET_LEVEL]: Permission denied! please login first\n\n");
+      break;
+    case LEVEL_WRONG_INPUT:
+      sprintf(message, "[SET_LEVEL]: Wrong input. Please enter command in this format: SET LEVEL [0-%d]\n\n", max_floor);
+      printUART(message);
+      break;
+    case LEVEL_OUT_OF_RANGE:
+      sprintf(message, "[SET_LEVEL]: Out of range. you can enter values in range (0, %d)\n\n", max_floor);
+      printUART(message);
       break;
   }
 }
