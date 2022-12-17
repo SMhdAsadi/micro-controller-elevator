@@ -1,6 +1,7 @@
 #include <stdbool.h>
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "types.h"
 #include "logger.h"
 
@@ -11,7 +12,7 @@ extern int timer_counter;
 
 extern int current_floor;
 extern int max_floor;
-extern int moving_delay;
+extern int floor_wait_time;
 
 extern Queue floor_queue;
 
@@ -151,6 +152,37 @@ void parse_level_command(char *command) {
   log_for_level(LEVEL_SUCCESS);
 }
 
+void parse_wait_command(char *command) {
+  if (!is_admin_mode) {
+    log_for_wait(WAIT_NOT_ADMIN_MODE);
+    return;
+  }
+
+  int length = strlen(command) - strlen("SET WAIT ");
+  if (length > 4 || length < 3) {
+    log_for_wait(WAIT_WRONG_INPUT);
+    return;
+  }
+
+  char input_number_in_string_type[5] = {0};
+  slice(command, input_number_in_string_type, 9, strlen(command));
+
+  char *endPtr;
+  int input_number_in_int_type = strtol(input_number_in_string_type, &endPtr, 10);
+  if (*endPtr != '\0' || endPtr == input_number_in_string_type) {
+    log_for_wait(WAIT_WRONG_INPUT);
+    return;
+  }
+
+  if (input_number_in_int_type < 500 || input_number_in_int_type > 5000 || input_number_in_int_type % 100 != 0) {
+    log_for_wait(WAIT_OUT_OF_RANGE);
+    return;
+  }
+
+  floor_wait_time = input_number_in_int_type;
+  log_for_wait(WAIT_SUCCESS);
+}
+
 void parse_command(char* command) {
   if(strstr(command, "ADMIN#")) {
     parse_admin_command(command);
@@ -159,8 +191,7 @@ void parse_command(char* command) {
   } else if(strstr(command, "SET LEVEL")) {
     parse_level_command(command);
   } else if(strstr(command, "SET WAIT")) {
-    int ms = 0;
-    sprintf(command, "SET WAIT %d", ms);
+    parse_wait_command(command);
   } else if(strstr(command, "SET LED")) {
     char *value = NULL;
     sprintf(command, "SET LED %s", value);

@@ -9,6 +9,7 @@ extern int user_input;
 extern UART_HandleTypeDef huart1;
 extern int max_floor;
 extern int current_floor;
+extern int floor_wait_time;
 
 void printUART(char *string) {
   HAL_UART_Transmit(&huart1, (uint8_t *)string, strlen(string), 1000);
@@ -93,7 +94,7 @@ void log_for_max_level(MaxLevelStatus maxLevelStatus) {
       printUART(message);
       break;
     case MAX_LEVEL_NOT_ADMIN_MODE:
-      printUART("[SET_MAX_LEVEL]: Oh you need to be in admin mode!\n\n");
+      printUART("[SET_MAX_LEVEL]: Permission denied! please login first\n\n");
       break;
     case MAX_LEVEL_WRONG_INPUT:
       printUART(("[SET_MAX_LEVEL]: Please enter command in this format: SET MAX LEVEL [0-9]\n\n"));
@@ -118,6 +119,25 @@ void log_for_level(LevelStatus levelStatus) {
     case LEVEL_OUT_OF_RANGE:
       sprintf(message, "[SET_LEVEL]: Out of range. you can enter values in range (0, %d)\n\n", max_floor);
       printUART(message);
+      break;
+  }
+}
+
+void log_for_wait(WaitStatus waitStatus) {
+  char message[90];
+  switch (waitStatus) {
+    case WAIT_SUCCESS:
+      sprintf(message, "[SET_WAIT]: successfully set wait time to be %d\n\n", floor_wait_time);
+      printUART(message);
+      break;
+    case WAIT_NOT_ADMIN_MODE:
+      printUART("[SET_WAIT]: Permission denied! please login first\n\n");
+      break;
+    case WAIT_WRONG_INPUT:
+      printUART("[SET_WAIT]: Wrong input. Please enter command in this format: SET WAIT [N]\n\n");
+      break;
+    case WAIT_OUT_OF_RANGE:
+      printUART("[SET_WAIT]: Out of range. Please enter a multiple of 100 in range 500-5000\n\n");
       break;
   }
 }

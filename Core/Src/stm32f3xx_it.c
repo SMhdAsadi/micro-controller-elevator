@@ -52,7 +52,7 @@ int timer_counter = 0;
 
 int current_floor = 0;
 int max_floor = 9;
-int moving_delay = 1000;
+int floor_wait_time = 1000;
 
 Queue floor_queue = {.values = {0}, .length = 0,};
 
@@ -290,7 +290,7 @@ void TIM3_IRQHandler(void)
   if (timer_counter % 5 == 0) {
 //    buzzer_kon();
   }
-  if (timer_counter % (moving_delay / 50) == 0) {
+  if (timer_counter % (floor_wait_time / 50) == 0) {
     int target_floor = peek_from_floor_queue();
     if (current_floor < target_floor) {
       current_floor++;
