@@ -67,10 +67,16 @@ char *log_submit(int status) {
   printUART(message);
 }
 
-void log_for_login(bool was_successful) {
-  if (was_successful) {
-    printUART("[LOGIN]: Logged in!\n\n");
-  } else {
-    printUART("[LOGIN]: Unable to login. Wrong password\n\n");
+void log_for_login(LoginStatus loginStatus) {
+  switch (loginStatus) {
+    case LOGIN_CORRECT_PASSWORD:
+      printUART("[LOGIN]: Logged in!\n\n");
+      break;
+    case LOGIN_WRONG_PASSWORD:
+      printUART("[LOGIN]: Unable to login. Wrong password\n\n");
+      break;
+    case LOGIN_QUEUE_NOT_EMPTY:
+      printUART("[LOGIN]: Oh elevator is moving, please wait...\n\n");
+      break;
   }
 }

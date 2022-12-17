@@ -3,6 +3,6 @@
 
 void printUART(char *string);
 void log_submit(int status);
-void log_for_login(bool was_successful);
+void log_for_login(LoginStatus loginStatus);
 
 #endif //MICRO_CONTROLLER_ELEVATOR_MINI_PROJECT_LOGGER_H

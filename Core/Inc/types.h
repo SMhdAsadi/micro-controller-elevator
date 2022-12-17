@@ -11,4 +11,6 @@ typedef struct {
 // ElevatorState.CONFIG => admin mode; changing elevator config params
 typedef enum {LOW, HIGH} AlarmState;
 
+typedef enum login_status {LOGIN_CORRECT_PASSWORD, LOGIN_WRONG_PASSWORD, LOGIN_QUEUE_NOT_EMPTY} LoginStatus;
+
 #endif //MICRO_CONTROLLER_ELEVATOR_MINI_PROJECT_TYPES_H

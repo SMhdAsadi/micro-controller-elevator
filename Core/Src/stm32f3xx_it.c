@@ -52,7 +52,7 @@ int timer_counter = 0;
 
 int current_floor = 0;
 int max_floor = 9;
-int moving_delay = 500;
+int moving_delay = 1000;
 
 Queue floor_queue = {.values = {0}, .length = 0,};
 

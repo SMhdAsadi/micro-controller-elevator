@@ -63,6 +63,10 @@ bool floor_queue_includes(int number) {
   return false;
 }
 
+bool is_floor_queue_empty() {
+  return floor_queue.length == 0;
+}
+
 int add_to_floor_queue(int floor) {
   if (floor_queue_includes(floor)) return -3; // no need to add
   if (floor_queue.length > max_floor) return -1; // queue is full
@@ -75,9 +79,9 @@ int add_to_floor_queue(int floor) {
 void login(char* password) {
   if (strcmp(password, admin_password) == 0) {
     is_admin_mode = true;
-    log_for_login(true);
+    log_for_login(LOGIN_CORRECT_PASSWORD);
   } else {
-    log_for_login(false);
+    log_for_login(LOGIN_WRONG_PASSWORD);
   }
 }
 
@@ -88,11 +92,19 @@ void set_wait(int ms) {}
 void toggle_led(char* value) {}
 void test(int floors[]) {}
 
-void parse_command(char* command) {
-  if(strstr(command, "ADMIN#")) {
+void parse_admin_command(char *command) {
+    if (!is_floor_queue_empty()) {
+      log_for_login(LOGIN_QUEUE_NOT_EMPTY);
+      return;
+    }
     char password[5] = {0};
     slice(command, password, 6, 10);
     login(password);
+}
+
+void parse_command(char* command) {
+  if(strstr(command, "ADMIN#")) {
+    parse_admin_command(command);
   } else if(strstr(command, "SET MAX LEVEL")) {
     int n = 0;
     sprintf(command, "SET MAX LEVEL %d", n);
@@ -117,5 +129,7 @@ void parse_command(char* command) {
     for(int i = 0; i < size; i++)
       values[i] = str_value[i] - 48;
     test(values);
+  } else if (strstr(command, "Start")) {
+    //
   }
 }

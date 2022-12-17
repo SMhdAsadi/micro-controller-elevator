@@ -103,20 +103,6 @@ CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Core/Src/main.c.obj: C
   C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h \
   C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart_ex.h \
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/lib/gcc/arm-none-eabi/12.2.0/include/stdbool.h \
-  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/string.h \
-  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/_ansi.h \
-  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/newlib.h \
-  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/sys/config.h \
-  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/machine/ieeefp.h \
-  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/sys/reent.h \
-  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/_ansi.h \
-  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/sys/_types.h \
-  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/machine/_types.h \
-  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/sys/lock.h \
-  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/sys/cdefs.h \
-  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/sys/_locale.h \
-  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/strings.h \
-  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/sys/string.h \
   C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc/types.h \
   C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc/utility.h \
   C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc/types.h \
