@@ -25,7 +25,9 @@ CMakeFiles/micro-controller-elevator-mini-project.elf.dir/Core/Src/logger.c.obj:
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/sys/stdio.h \
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/malloc.h \
   C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/machine/malloc.h \
-  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/lib/gcc/arm-none-eabi/12.2.0/include/stdbool.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/stdlib.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/machine/stdlib.h \
+  C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/alloca.h \
   C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc/types.h \
   C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h \
   C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303xc.h \
@@ -1103,21 +1105,27 @@ C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/a
 
 C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/malloc.h:
 
-C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/lib/gcc/arm-none-eabi/12.2.0/include/stdbool.h:
+C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc/utility.h:
+
+C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/stdlib.h:
+
+C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/sys/signal.h:
+
+C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/stdint.h:
+
+C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/machine/stdlib.h:
+
+C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_pwr_ex.h:
+
+C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/lib/gcc/arm-none-eabi/12.2.0/include/stdint.h:
+
+C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/alloca.h:
 
 C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc/types.h:
 
 C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_gpio_ex.h:
 
 C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h:
-
-C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_pwr_ex.h:
-
-C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/lib/gcc/arm-none-eabi/12.2.0/include/stdint.h:
-
-C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/sys/signal.h:
-
-C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/stdint.h:
 
 C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/CMSIS/Include/mpu_armv7.h:
 
@@ -1155,9 +1163,7 @@ C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_
 
 C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_pwr.h:
 
-C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/stdlib.h:
-
-C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc/utility.h:
+C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/lib/gcc/arm-none-eabi/12.2.0/include/stdbool.h:
 
 C:/Users/SMhd3/Desktop/micro-controller-elevator-mini-project/Core/Inc/logger.h:
 
@@ -1200,10 +1206,6 @@ C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/a
 C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/sys/_pthreadtypes.h:
 
 C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/machine/types.h:
-
-C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/machine/stdlib.h:
-
-C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/alloca.h:
 
 C:/Program\ Files\ (x86)/Arm\ GNU\ Toolchain\ arm-none-eabi/12.2\ mpacbti-bet1/arm-none-eabi/include/errno.h:
 

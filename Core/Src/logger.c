@@ -1,12 +1,14 @@
 #include <string.h>
 #include <stdio.h>
 #include <malloc.h>
+#include <stdlib.h>
 #include "types.h"
 #include "stm32f3xx.h"
 
 extern Queue floor_queue;
 extern int user_input;
 extern UART_HandleTypeDef huart1;
+extern int max_floor;
 
 void printUART(char *string) {
   HAL_UART_Transmit(&huart1, (uint8_t *)string, strlen(string), 1000);
@@ -79,6 +81,22 @@ void log_for_login(LoginStatus loginStatus) {
       break;
     case LOGIN_QUEUE_NOT_EMPTY:
       printUART("[LOGIN]: Oh elevator is moving, please wait...\n\n");
+      break;
+  }
+}
+
+void log_for_max_level(MaxLevelStatus maxLevelStatus) {
+  char message[60];
+  switch (maxLevelStatus) {
+    case MAX_LEVEL_SUCCESS:
+      sprintf(message, "[SET_MAX_LEVEL]: Successfully set max level to be %d\n\n", max_floor);
+      printUART(message);
+      break;
+    case MAX_LEVEL_NOT_ADMIN_MODE:
+      printUART("[SET_MAX_LEVEL]: Oh you need to be in admin mode!\n\n");
+      break;
+    case MAX_LEVEL_WRONG_INPUT:
+      printUART(("[SET_MAX_LEVEL]: Please enter command in this format: SET ADMIN MODE [0-9]\n\n"));
       break;
   }
 }

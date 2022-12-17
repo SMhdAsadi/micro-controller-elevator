@@ -54,6 +54,10 @@ int peek_from_floor_queue() {
   return floor_queue.values[0];
 }
 
+void clear_floor_queue() {
+  floor_queue.length = 0;
+}
+
 bool floor_queue_includes(int number) {
   for (int i = 0; i < floor_queue.length; i++) {
     if (floor_queue.values[i] == number) {
@@ -85,7 +89,6 @@ void login(char* password) {
   }
 }
 
-void set_max_floor(int n) {}
 void set_floor(int n) {}
 void set_wait(int ms) {}
 /* value: ON | OFF */
@@ -93,22 +96,47 @@ void toggle_led(char* value) {}
 void test(int floors[]) {}
 
 void parse_admin_command(char *command) {
-    if (!is_floor_queue_empty()) {
-      log_for_login(LOGIN_QUEUE_NOT_EMPTY);
-      return;
-    }
-    char password[5] = {0};
-    slice(command, password, 6, 10);
-    login(password);
+  if (!is_floor_queue_empty()) {
+    log_for_login(LOGIN_QUEUE_NOT_EMPTY);
+    return;
+  }
+  char password[5] = {0};
+  slice(command, password, 6, 10);
+  login(password);
+}
+
+void parse_max_level_command(char *command) {
+  if (!is_admin_mode) {
+    log_for_max_level(MAX_LEVEL_NOT_ADMIN_MODE);
+    return;
+  }
+  int length = strlen(command) - strlen("SET MAX LEVEL ");
+  if (length > 1) {
+    log_for_max_level(MAX_LEVEL_WRONG_INPUT);
+    return;
+  }
+
+  char max_level[2] = {0};
+  slice(command, max_level, 14, 15);
+  int ascii_code = max_level[0] - 48;
+  if (ascii_code > 9 || ascii_code < 0) {
+    log_for_max_level(MAX_LEVEL_WRONG_INPUT);
+    return;
+  }
+
+  max_floor = ascii_code;
+  if (current_floor > max_floor) {
+    current_floor = max_floor;
+  }
+  clear_floor_queue();
+  log_for_max_level(MAX_LEVEL_SUCCESS);
 }
 
 void parse_command(char* command) {
   if(strstr(command, "ADMIN#")) {
     parse_admin_command(command);
   } else if(strstr(command, "SET MAX LEVEL")) {
-    int n = 0;
-    sprintf(command, "SET MAX LEVEL %d", n);
-    set_max_floor(n);
+    parse_max_level_command(command);
   } else if(strstr(command, "SET LEVEL")) {
     int n = 0;
     sprintf(command, "SET LEVEL %d", n);

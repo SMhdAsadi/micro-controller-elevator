@@ -18,8 +18,9 @@ typedef enum submit_status {
   SUBMIT_DUPLICATE_FLOOR, // this floor is already in queue, no need to add
   SUBMIT_CURRENT_FLOOR, // elevator is already in this floor
   SUBMIT_ADMIN_MODE
-}SubmitStatus;
+} SubmitStatus;
 
 typedef enum login_status {LOGIN_CORRECT_PASSWORD, LOGIN_WRONG_PASSWORD, LOGIN_QUEUE_NOT_EMPTY} LoginStatus;
 
+typedef enum set_max_level_status {MAX_LEVEL_SUCCESS, MAX_LEVEL_NOT_ADMIN_MODE, MAX_LEVEL_WRONG_INPUT} MaxLevelStatus;
 #endif //MICRO_CONTROLLER_ELEVATOR_MINI_PROJECT_TYPES_H
