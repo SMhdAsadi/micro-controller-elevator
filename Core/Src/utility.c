@@ -24,6 +24,24 @@ extern bool is_admin_mode;
 extern bool is_idle;
 extern char *admin_password;
 
+bool are_all_digits(char *str) {
+  for (int i = 0; i < strlen(str); i++) {
+    if (str[i] > '9' || str[i] < '0') return false;
+  }
+
+  return true;
+}
+
+bool are_all_floors_valid(char *str) {
+  int number;
+  for (int i = 0; i < strlen(str); i++) {
+    number = str[i] - 48;
+    if (number < 0 || number > max_floor) return false;
+  }
+
+  return true;
+}
+
 void slice(const char *str, char *result, size_t start, size_t end) {
   strncpy(result, str + start, end - start);
 }
@@ -183,7 +201,62 @@ void parse_wait_command(char *command) {
   log_for_wait(WAIT_SUCCESS);
 }
 
-void parse_command(char* command) {
+void parse_led_command(char *command) {
+  if (!is_admin_mode) {
+    log_for_led(LED_NOT_ADMIN_MODE);
+    return;
+  }
+
+  char parameter[10] = {0};
+  slice(command, parameter, 8, strlen(command));
+  if (strcmp(parameter, "ON") != 0 && strcmp(parameter, "OFF") != 0) {
+    log_for_led(LED_WRONG_INPUT);
+    return;
+  }
+
+  alarm_led_enabled = strcmp(parameter, "ON") == 0 ? 1 : 0;
+  log_for_led(LED_SUCCESS);
+}
+
+void parse_test_command(char *command) {
+  // check admin mode
+  if (!is_admin_mode) {
+    log_for_test(TEST_NOT_ADMIN_MODE);
+    return;
+  }
+
+  // check list length
+  int length = strlen(command) - strlen("TEST#");
+  if (length > 5 || length < 1) {
+    log_for_test(TEST_WRONG_INPUT);
+    return;
+  }
+
+  char list[6] = {0};
+  slice(command, list, 5, strlen(command));
+
+  // check all chars are number
+  if (!are_all_digits(list)) {
+    log_for_test(TEST_WRONG_INPUT);
+    return;
+  }
+
+  // check all numbers in list are valid
+  if (!are_all_floors_valid(list)) {
+    log_for_test(TEST_OUT_OF_RANGE);
+    return;
+  }
+
+  clear_floor_queue();
+  int number;
+  for (int i = 0; i < strlen(list); i++) {
+    number = list[i] - 48;
+    add_to_floor_queue(number);
+  }
+  log_for_test(TEST_SUCCESS);
+}
+
+void parse_command(char *command) {
   if(strstr(command, "ADMIN#")) {
     parse_admin_command(command);
   } else if(strstr(command, "SET MAX LEVEL")) {
@@ -193,15 +266,9 @@ void parse_command(char* command) {
   } else if(strstr(command, "SET WAIT")) {
     parse_wait_command(command);
   } else if(strstr(command, "SET LED")) {
-    char *value = NULL;
-    sprintf(command, "SET LED %s", value);
+    parse_led_command(command);
   } else if(strstr(command, "TEST#")) {
-    char *str_value = NULL;
-    sprintf(command, "TEST#%s", str_value);
-    unsigned int size = strlen(str_value);
-    int values[size];
-    for(int i = 0; i < size; i++)
-      values[i] = str_value[i] - 48;
+    parse_test_command(command);
   } else if (strstr(command, "Start")) {
     //
   }

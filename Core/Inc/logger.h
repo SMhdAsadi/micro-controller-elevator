@@ -7,5 +7,7 @@ void log_for_login(LoginStatus loginStatus);
 void log_for_max_level(MaxLevelStatus maxLevelStatus);
 void log_for_level(LevelStatus levelStatus);
 void log_for_wait(WaitStatus waitStatus);
+void log_for_led(LedStatus ledStatus);
+void log_for_test(TestStatus testStatus);
 
 #endif //MICRO_CONTROLLER_ELEVATOR_MINI_PROJECT_LOGGER_H

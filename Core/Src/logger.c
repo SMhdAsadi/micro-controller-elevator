@@ -1,6 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include "types.h"
 #include "stm32f3xx.h"
 
@@ -10,6 +11,7 @@ extern UART_HandleTypeDef huart1;
 extern int max_floor;
 extern int current_floor;
 extern int floor_wait_time;
+extern bool alarm_led_enabled;
 
 void printUART(char *string) {
   HAL_UART_Transmit(&huart1, (uint8_t *)string, strlen(string), 1000);
@@ -138,6 +140,48 @@ void log_for_wait(WaitStatus waitStatus) {
       break;
     case WAIT_OUT_OF_RANGE:
       printUART("[SET_WAIT]: Out of range. Please enter a multiple of 100 in range 500-5000\n\n");
+      break;
+  }
+}
+
+void log_for_led(LedStatus ledStatus) {
+  char message[60];
+  switch (ledStatus) {
+    case LED_SUCCESS:
+      sprintf(message, "[SET_LED]: successfully set LED to be %s\n\n", alarm_led_enabled ? "ON" : "OFF");
+      printUART(message);
+      break;
+    case LED_NOT_ADMIN_MODE:
+      printUART("[SET_LED]: Permission denied! please login first\n\n");
+      break;
+    case LED_WRONG_INPUT:
+      printUART("[SET_LED]: Wrong input. Please enter command in this format: SET LED [ON/OFF]\n\n");
+      break;
+  }
+}
+
+void log_for_test(TestStatus testStatus) {
+  char *queue;
+  char message[100];
+
+  switch (testStatus) {
+    case TEST_SUCCESS:
+      sprintf(message, "[TEST]: Success! added your test floors to queue and optimized it\n");
+      queue = get_floor_queue();
+      strcat(message, queue);
+      strcat(message, "\n\n");
+      printUART(message);
+      free(queue);
+      break;
+    case TEST_NOT_ADMIN_MODE:
+      printUART("[TEST]: Permission denied! please login first\n\n");
+      break;
+    case TEST_WRONG_INPUT:
+      printUART("[TEST]: Wrong input. Please enter command in this format: TEST#{sample}\n\n");
+      break;
+    case TEST_OUT_OF_RANGE:
+      sprintf(message, "[TEST]: Out of range. Please enter a list of numbers in range (0, %d)\n\n", max_floor);
+      printUART(message);
       break;
   }
 }
