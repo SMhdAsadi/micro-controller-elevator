@@ -79,12 +79,12 @@ static void MX_USART1_UART_Init(void);
 /* USER CODE BEGIN 0 */
 void onSubmitPress() {
   if (current_floor == user_input) {
-    printUART("[Submit]: Elevator is already in your floor\n\n\0");
-    return;
+    log_submit(SUBMIT_CURRENT_FLOOR);
+  } else {
+    SubmitStatus status = add_to_floor_queue(user_input);
+    is_idle = false;
+    log_submit(status);
   }
-  int status = add_to_floor_queue(user_input);
-  is_idle = false;
-  log_submit(status);
 }
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {

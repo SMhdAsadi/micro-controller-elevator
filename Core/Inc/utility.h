@@ -3,7 +3,7 @@
 
 #include "types.h"
 
-int add_to_floor_queue(int floor);
+SubmitStatus add_to_floor_queue(int floor);
 int peek_from_floor_queue();
 int dequeue_from_floor_queue();
 void parse_command(char *command);

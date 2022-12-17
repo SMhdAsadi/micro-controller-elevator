@@ -67,13 +67,13 @@ bool is_floor_queue_empty() {
   return floor_queue.length == 0;
 }
 
-int add_to_floor_queue(int floor) {
-  if (floor_queue_includes(floor)) return -3; // no need to add
-  if (floor_queue.length > max_floor) return -1; // queue is full
-  if (floor > max_floor || floor < 0) return -2; // floor is wrong
+SubmitStatus add_to_floor_queue(int floor) {
+  if (floor_queue_includes(floor)) return SUBMIT_DUPLICATE_FLOOR;
+  if (floor_queue.length > max_floor) return SUBMIT_QUEUE_FULL;
+  if (floor > max_floor || floor < 0) return SUBMIT_WRONG_FLOOR;
 
   enqueue_to_floor_queue(floor);
-  return 0;
+  return SUBMIT_SUCCESS;
 }
 
 void login(char* password) {

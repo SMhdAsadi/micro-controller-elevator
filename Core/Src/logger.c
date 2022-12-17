@@ -26,41 +26,41 @@ char *get_floor_queue() {
   return string;
 }
 
-char *log_submit(int status) {
+char *log_submit(SubmitStatus submitStatus) {
   char *queue;
   char message[100] = {0};
 
-  switch (status) {
-    case 0:
+  switch (submitStatus) {
+    case SUBMIT_SUCCESS:
       sprintf(message, "[Submit]: Added %d to queue successfully\n", user_input);
       queue = get_floor_queue();
       strcat(message, queue);
       strcat(message, "\n\n");
       free(queue);
       break;
-    case -1:
+    case SUBMIT_QUEUE_FULL:
       sprintf(message, "[submit]: Cannot add %d to queue, queue is full\n", user_input);
       queue = get_floor_queue();
       strcat(message, queue);
       strcat(message, "\n\n");
       free(queue);
       break;
-    case -2:
+    case SUBMIT_WRONG_FLOOR:
       sprintf(message, "[Submit]: Cannot add %d to queue, bad floor\n", user_input);
       queue = get_floor_queue();
       strcat(message, queue);
       strcat(message, "\n\n");
       free(queue);
       break;
-    case -3:
+    case SUBMIT_DUPLICATE_FLOOR:
       sprintf(message, "[Submit]: Didn't add %d to queue, this floor is already in queue\n", user_input);
       queue = get_floor_queue();
       strcat(message, queue);
       strcat(message, "\n\n");
       free(queue);
       break;
-    default:
-      strcpy(message, "");
+    case SUBMIT_CURRENT_FLOOR:
+      strcpy(message, "[Submit]: Elevator is already in this floor!\n\n\0");
       break;
   }
 
