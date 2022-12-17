@@ -1,7 +1,6 @@
 #include <string.h>
 #include <stdio.h>
 #include <malloc.h>
-#include <stdbool.h>
 #include "types.h"
 #include "stm32f3xx.h"
 
@@ -26,7 +25,7 @@ char *get_floor_queue() {
   return string;
 }
 
-char *log_submit(SubmitStatus submitStatus) {
+void log_for_submit(SubmitStatus submitStatus) {
   char *queue;
   char message[100] = {0};
 
@@ -60,7 +59,10 @@ char *log_submit(SubmitStatus submitStatus) {
       free(queue);
       break;
     case SUBMIT_CURRENT_FLOOR:
-      strcpy(message, "[Submit]: Elevator is already in this floor!\n\n\0");
+      strcpy(message, "[Submit]: Elevator is already in this floor!\n\n");
+      break;
+    case SUBMIT_ADMIN_MODE:
+      strcpy(message, "[SUBMIT]: You cannot use elevator in admin mode\n\n");
       break;
   }
 

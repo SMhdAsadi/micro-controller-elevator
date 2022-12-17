@@ -63,6 +63,7 @@ extern int current_floor;
 extern int max_floor;
 extern Queue floor_queue;
 extern int is_idle;
+extern bool is_admin_mode;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -78,12 +79,14 @@ static void MX_USART1_UART_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 void onSubmitPress() {
-  if (current_floor == user_input) {
-    log_submit(SUBMIT_CURRENT_FLOOR);
+  if (is_admin_mode) {
+    log_for_submit(SUBMIT_ADMIN_MODE);
+  } else if (current_floor == user_input) {
+    log_for_submit(SUBMIT_CURRENT_FLOOR);
   } else {
     SubmitStatus status = add_to_floor_queue(user_input);
     is_idle = false;
-    log_submit(status);
+    log_for_submit(status);
   }
 }
 

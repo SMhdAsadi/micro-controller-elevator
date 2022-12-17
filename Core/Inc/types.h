@@ -16,7 +16,8 @@ typedef enum submit_status {
   SUBMIT_QUEUE_FULL, // queue is full
   SUBMIT_WRONG_FLOOR, // floor number is wrong, should be between 0 and max floor
   SUBMIT_DUPLICATE_FLOOR, // this floor is already in queue, no need to add
-  SUBMIT_CURRENT_FLOOR // elevator is already in this floor
+  SUBMIT_CURRENT_FLOOR, // elevator is already in this floor
+  SUBMIT_ADMIN_MODE
 }SubmitStatus;
 
 typedef enum login_status {LOGIN_CORRECT_PASSWORD, LOGIN_WRONG_PASSWORD, LOGIN_QUEUE_NOT_EMPTY} LoginStatus;
